@@ -135,3 +135,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 frontend_learning_withStandalone/package.json
+frontend_learning_withoutStandalone/src/app/app-routing-module.ts
+frontend_learning_withoutStandalone/README.md
