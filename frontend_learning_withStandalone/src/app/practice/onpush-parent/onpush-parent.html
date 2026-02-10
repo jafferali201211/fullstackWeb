@@ -1,0 +1,44 @@
+<p>onpush-parent works!</p>
+
+<div class="container">
+      <h2>OnPush Change Detection Lab</h2>
+
+      <div class="box parent">
+        <h3>Parent (Default)</h3>
+        <p><b>Parent counter:</b> {{ counter }}</p>
+        <p><b>Parent user name:</b> {{ user.name }}</p>
+
+        <button (click)="incCounter()">1) Parent incCounter() (primitive input change)</button>
+
+        <button (click)="replaceUser()">
+          2) Replace user object (NEW reference ✅ OnPush updates)
+        </button>
+
+        <button (click)="mutateUserName()">
+          3) Mutate user.name (SAME reference ❌ OnPush may not update)
+        </button>
+
+        <button (click)="forceChildCheck()">
+          4) Force child update (markForCheck ✅)
+        </button>
+
+        <button (click)="outsideZoneMutation()">
+          5) Update outside Angular zone (❌ no CD unless markForCheck)
+        </button>
+
+        <hr />
+
+        <h4>Async pipe demo (✅ OnPush updates when observable emits)</h4>
+        <button (click)="emitFromObservable()">Emit new value</button>
+        <!-- <p><b>Observable value:</b> {{ obs$ | async }}</p> -->
+      </div>
+
+      <app-onpush-child
+        [user]="user"
+        [counter]="counter">
+      </app-onpush-child>
+
+      <p class="hint">
+        Open DevTools Console and watch <b>ngDoCheck</b> logs for Parent & Child.
+      </p>
+    </div>

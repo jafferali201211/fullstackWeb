@@ -1,0 +1,40 @@
+<p>Register</p>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label>Name</label>
+    <input type="text" formControlName="name"/> {{ userForm.get('name')?.value |json}}
+    <!-- @if(name?.touched && name?.errors?.['required']){
+        <div style="color:red">Name is required</div>
+    } -->
+    @if(f.name.touched && f.name.errors?.['required']){
+        <div style="color:red">Name is required</div>
+    }
+    <!-- @if(name?.touched && name?.errors?.['noSpace']){
+        <div style="color:red">No space is not allowed</div>
+    } -->
+        
+    @if(f.name.touched && f.name.errors?.['noSpace']) {
+         <div style="color:red">Name cannot be only spaces</div>
+    }
+
+    <br />
+    <br />
+    <label>Email</label>
+    <input type="text" formControlName="email"/>
+    @if(email?.touched && email?.invalid){
+         <div style="color:red">email is required</div>
+    }
+
+    <button type="submit">submit form</button>
+    <hr/>
+    <h3>Live form value</h3>
+    <pre>{{userForm.value | json}}</pre>
+    
+<pre>
+    <!-- {{userForm |json}} -->
+Status: {{ userForm.get('name')?.status }}
+Valid:  {{ userForm.get('name')?.valid }}
+Errors: {{ userForm.get('name')?.errors | json }}
+</pre>
+
+</form>

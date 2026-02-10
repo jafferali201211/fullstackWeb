@@ -1,1 +1,15 @@
 <p>test-comp1 works!</p>
+<h2>Signals counter </h2>
+<p>count : {{count()}}</p>
+<p>Is even? @if (isEven()) {} @else {}</p>
+
+<button (click)="inc()">+1</button>
+<button (click)="dec()">-1</button>
+<button (click)="reset()">reset</button>
+
+<h3>History (last 5)</h3>
+<ul>
+    @for (h of history(); track $index){
+        <li>{{$index +1 }}-> {{h}}</li>
+    }
+</ul>

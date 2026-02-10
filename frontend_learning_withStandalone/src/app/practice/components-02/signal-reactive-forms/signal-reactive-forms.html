@@ -1,0 +1,12 @@
+<p>signal-reactive-forms works!</p>
+
+<form [formGroup]="loginForm">
+      <input placeholder="Email" formControlName="email" />
+      <input placeholder="Password" [type]="showPassword() ? 'text' : 'password'" formControlName="password" />
+
+      <button [disabled]="!isFormValid()">Login</button>
+
+      <p>{{ statusMessage() }}</p>
+    </form>
+
+    <button (click)="toggleShowPassword()">Toggle Password Visibility</button>

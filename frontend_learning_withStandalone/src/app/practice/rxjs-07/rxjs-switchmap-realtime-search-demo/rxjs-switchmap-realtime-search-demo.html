@@ -1,0 +1,26 @@
+<p>rxjs-switchmap-realtime-search-demo works!</p>
+
+<h2>switchMap (Real Typeahead Search)</h2>
+
+    <p>
+      Try typing fast: <b>phone</b>, <b>laptop</b>, <b>perfume</b><br/>
+      Open DevTools → Network → Throttle “Slow 3G” to SEE cancellation clearly.
+    </p>
+
+    <input
+      [(ngModel)]="query"
+      (ngModelChange)="onQueryChange($event)"
+      placeholder="Search products..."
+      style="width:320px;padding:8px"
+    />
+
+    <div style="margin-top:12px">
+      <span *ngIf="loading" style="color:#1976d2"><b>Loading...</b></span>
+      <span *ngIf="error" style="color:#d32f2f"><b>{{ error }}</b></span>
+    </div>
+
+    <ul>
+      <li *ngFor="let p of products">
+        {{ p.title }} — ₹{{ p.price }}
+      </li>
+    </ul>
