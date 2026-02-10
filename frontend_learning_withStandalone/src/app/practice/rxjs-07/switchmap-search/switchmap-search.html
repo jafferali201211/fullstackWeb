@@ -1,0 +1,12 @@
+<p>switchmap-search works!</p>
+
+<input type="text" [formControl]="searchControl" placeholder="type at least  2 letter" />
+
+<p *ngIf="loading">loading...</p>
+
+
+<ul>
+    <li *ngFor="let u of users">
+        {{u.name}} -{{u.email}}
+    </li>
+</ul>

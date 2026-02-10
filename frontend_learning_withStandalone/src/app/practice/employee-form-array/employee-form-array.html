@@ -1,0 +1,42 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+
+  <!-- Employee Name -->
+  <div>
+    <label>Employee Name</label>
+    <input type="text" formControlName="employeeName" />
+
+    <small style="color:red" *ngIf="employeeForm.get('employeeName')?.touched && employeeForm.get('employeeName')?.hasError('required')">
+      Name is required
+    </small>
+  </div>
+
+  <hr />
+
+  <!-- Skills FormArray -->
+  <div formArrayName="skills">
+    <h3>Skills</h3>
+
+    <!-- Loop through each FormControl inside skills -->
+    <div *ngFor="let ctrl of skills.controls; let i = index">
+      <!-- Important: [formControlName]="i" binds control at index i -->
+      <input type="text" [formControlName]="i" placeholder="Enter skill" />
+
+      <button type="button" (click)="removeSkill(i)">Remove</button>
+
+      <!-- Validation errors for each skill -->
+      <div style="color:red" *ngIf="ctrl.touched && ctrl.invalid">
+        <small *ngIf="ctrl.hasError('required')">Skill is required</small>
+        <small *ngIf="ctrl.hasError('minlength')">Min 2 characters</small>
+      </div>
+    </div>
+
+    <button type="button" (click)="addSkill()">+ Add Skill</button>
+  </div>
+
+  <hr />
+
+  <button type="submit">Submit</button>
+
+  <!-- Debug (optional) -->
+  <pre>{{ employeeForm.value | json }}</pre>
+</form>
