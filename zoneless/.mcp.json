@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "angular": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@angular/cli@20.3.5",
+        "mcp"
+      ]
+    }
+  },
+  "allowedTools": [
+    "mcp__angular__*"
+  ]
+}

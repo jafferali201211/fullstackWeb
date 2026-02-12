@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "angular-cli": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@angular/cli@20.3.5",
+        "mcp",
+        "--experimental-tool",        "modernize",
+        "onpush-zoneless-migration",
+        "find_examples"
+      ]
+    }
+  }
+}

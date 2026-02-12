@@ -1,4 +1,4 @@
-import { Component ,computed,effect,inject, signal} from '@angular/core';
+import { Component ,computed,effect,inject, signal,resource} from '@angular/core';
 import {ReactiveFormsModule,Validators,FormBuilder,FormGroup, FormControl} from '@angular/forms';
 @Component({
   selector: 'app-signal-reactive-forms',
