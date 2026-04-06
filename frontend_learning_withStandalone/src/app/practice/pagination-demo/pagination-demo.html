@@ -1,0 +1,9 @@
+<p>pagination-demo works!</p>
+<!-- @for(let post of posts){
+    <p>{{post.id}}</p>
+} -->
+
+<p *ngFor="let post of posts">{{post.id}}</p>
+<button (click)="next()">next </button>
+<p (click)="prev()"> prev</p>
+<!-- {{posts|json}} -->

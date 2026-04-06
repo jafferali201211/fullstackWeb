@@ -1,0 +1,20 @@
+<p>json-comp works!</p>
+<!-- {{fakeApiRes |json}} -->
+<!-- {{errorRes}} -->
+<div *ngFor="let asyncList1 of fakeApiRes; trackBy:trackById">{{asyncList1.description}}</div>
+/////////////////////////////////////////////////////////////////
+{{jsonVal|json}}
+ {{simpleval()}}
+<table>
+    <tr>
+    <td>username</td>
+    <td>email id</td>
+    <td>city</td>
+    </tr>
+    <tr *ngFor="let json of jsonVal">
+        <td>{{json.username}}</td>
+        <td>{{json.email}}</td>
+        <td>{{json.city}}</td>  
+        </tr>
+        
+</table>

@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule,FormBuilder,FormGroup,FormControl ,FormArray ,Validators} from '@angular/forms';
+import { Highlight } from '../directives-03/highlight';
+import { AppShow } from '../directives-03/app-show';
 
 @Component({
   selector: 'app-employee-form-array',
-  imports: [CommonModule,ReactiveFormsModule],
+  imports: [CommonModule,ReactiveFormsModule,Highlight,AppShow],
   templateUrl: './employee-form-array.html',
   styleUrl: './employee-form-array.css',
 })
@@ -15,6 +17,12 @@ export class EmployeeFormArray {
     employeeName:['',[Validators.required]],
     skills:this.fb.array([this.createSkillControl()])
   })
+  /*
+  employeeForm = this.fb.group({
+    employeeName:['',[Validators.required]],
+    skills:this.fb.array([this.createSkillControl()])
+  }) 
+   */
   
 // 5) Reusable method to create each skill FormControl + validators
   private createSkillControl(): FormControl {

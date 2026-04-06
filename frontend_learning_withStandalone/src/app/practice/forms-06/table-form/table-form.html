@@ -1,0 +1,73 @@
+<p>table-form works!</p>
+<section class="users">
+  <h2>Users</h2>
+
+  <div *ngIf="loading()">Loading users...</div>
+  <div *ngIf="error()" class="error">{{ error() }}</div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Website</th>
+        <th>Company</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users(); index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ u.name }}</td>
+        <td>{{ u.username }}</td>
+        <td><a [href]="'mailto:' + u.email">{{ u.email }}</a></td>
+        <td>{{ u.phone }}</td>
+        <td><a [href]="'http://' + u.website" target="_blank" rel="noopener">{{ u.website }}</a></td>
+        <td>{{ u?.company?.name }}</td>
+        <td>{{ fullAddress(u) }}</td>
+        <td><button type="submit" (click)="onSelectedUser(u)">Edit </button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<main>
+<section>
+  <form [formGroup]="updateForm">
+    <div class="field"> <label for="name">Name</label>
+      <input type="text" formControlName="name" />
+      <div class="error" *ngIf="updateForm.get('name')?.touched && updateForm.get('name')?.invalid">
+        Name is required
+      </div>
+    </div>
+    <br />
+    <label for="username">username</label>
+    <input type="text" formControlName="username" />
+    <br />
+    <label for="email">email</label>
+    <input type="email" formControlName="email" />
+    <div class="error" *ngIf="updateForm.get('email')?.touched && updateForm.get('email')?.invalid">
+      email is required
+    </div>
+    <br />
+    <label for="phone">phone</label>
+    <input formControlName="phone" />
+    <br />
+    <label for="website">Website</label>
+    <input formControlName="website" />
+    <div class="error" *ngIf="website.get('website')?.touched && website.get('website')?.invalid">
+      website is required
+    </div>
+    
+    <br />
+    <button [disabled]="updateForm.invalid || !updateForm.dirty">
+      Save Changes
+    </button>
+
+
+  </form>
+</section>
+</main>

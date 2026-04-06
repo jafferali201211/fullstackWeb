@@ -4,6 +4,7 @@ import {provideHttpClient,withInterceptors} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { routes } from './app.routes';
 import { loggingInterceptor } from './practice/core/logging-interceptor';
+import { provideAnimations } from '@angular/platform-browser/animations';
 // import { SelectivePreload } from './preloading/selective-preload.strategy';
 // import { AppTitleStrategy } from './title/app-title.strategy';
 
@@ -12,9 +13,11 @@ import { loggingInterceptor } from './practice/core/logging-interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    
     provideBrowserGlobalErrorListeners(),
     importProvidersFrom(ReactiveFormsModule),
     provideZoneChangeDetection({ eventCoalescing: true }),
+    
     provideRouter(routes,
       
       withInMemoryScrolling({ scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled' }),

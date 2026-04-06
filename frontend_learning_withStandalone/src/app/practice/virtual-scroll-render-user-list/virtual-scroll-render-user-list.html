@@ -1,0 +1,15 @@
+<p>virtual-scroll-render-user-list works!</p>
+
+   <h2>User List (Virtual Scroll)</h2>
+<cdk-virtual-scroll-viewport itemSize="50" class="viewport"></cdk-virtual-scroll-viewport>
+    <cdk-virtual-scroll-viewport
+      itemSize="50"
+      class="viewport">
+
+      <div
+        *cdkVirtualFor="let user of users; trackBy: trackById"
+        class="item">
+        {{ user.id }} - {{ user.name }}
+      </div>
+
+    </cdk-virtual-scroll-viewport>

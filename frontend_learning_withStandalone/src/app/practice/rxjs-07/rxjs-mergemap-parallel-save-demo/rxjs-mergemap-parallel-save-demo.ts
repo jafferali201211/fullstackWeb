@@ -36,7 +36,7 @@ private api = inject(RxjsRealApi);
   constructor() {
     this.click$
       .pipe(
-        tap(() => this.log('CLICK → start parallel save')),
+        tap(() => this.log('CLICK → start parallel save')), //spinner also  used to indicate loading state
 
         // WHY: create a stream of items to save
         mergeMap(() => {

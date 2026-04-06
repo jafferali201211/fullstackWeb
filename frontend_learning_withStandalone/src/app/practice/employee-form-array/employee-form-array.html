@@ -1,8 +1,15 @@
+<!-- Custom attribute directive -->
+<h1 [appHightlight]="'lightblue'">Employee Form Array   </h1>
+
+<!--custom Structural directive -->
+<div *appShow="true">Visible</div>
+<div *appShow="false">Hidden</div>
+
 <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
 
   <!-- Employee Name -->
   <div>
-    <label>Employee Name</label>
+    <label >Employee Name</label>
     <input type="text" formControlName="employeeName" />
 
     <small style="color:red" *ngIf="employeeForm.get('employeeName')?.touched && employeeForm.get('employeeName')?.hasError('required')">

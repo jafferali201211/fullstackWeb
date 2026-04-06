@@ -12,7 +12,8 @@ export class RegisterForms implements OnInit{
   fb = inject(FormBuilder)
   userForm = this.fb.group({
     name : ['',[Validators.required,noSpaceValidators]],
-    email:['',[Validators.required,Validators.email]]
+    email:['',[Validators.required,Validators.email]],
+    // skills:[]
   })
  
   onSubmit(){

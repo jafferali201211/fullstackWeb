@@ -1,0 +1,11 @@
+<p>infinite-scroll works!</p>
+<div class="post" *ngFor="let post of posts">
+    <h4>{{post.id}}-{{post.title}}</h4>
+    <p>{{post.body}}</p>
+
+</div>
+
+@if(loading){
+    <p>Loading...</p>
+}
+   
