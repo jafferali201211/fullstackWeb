@@ -2,7 +2,7 @@ import { Component ,computed,effect,inject, signal,resource} from '@angular/core
 import {ReactiveFormsModule,Validators,FormBuilder,FormGroup, FormControl} from '@angular/forms';
 @Component({
   selector: 'app-signal-reactive-forms',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './signal-reactive-forms.html',
   styleUrl: './signal-reactive-forms.css',
 })
