@@ -1,4 +1,13 @@
 
-ng g feature products 
+ <h1>NgRx Training</h1>
+
+    <button (click)="load()">Load Posts</button>
+
+    <p *ngIf="loading$ | async">Loading...</p>
+
+    <div *ngFor="let post of posts$ | async">
+      {{ post.title }}
+    </div>
+
 
 <router-outlet />

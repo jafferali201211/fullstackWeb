@@ -1,7 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { StoreModule } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { Observable } from 'rxjs';
+import { selectAllPosts, selectLoading } from './posts/posts.selectors';
+import { loadPosts } from './posts/posts.actions';
 
 
 
@@ -15,4 +18,16 @@ import { EffectsModule } from '@ngrx/effects';
 export class App {
   protected readonly title = signal('ngrxDemo');
   
+posts$: Observable<any[]>;
+  loading$: Observable<boolean>;
+
+  constructor(private store: Store) {
+    this.posts$ = this.store.select(selectAllPosts);
+    this.loading$ = this.store.select(selectLoading);
+  }
+
+  load() {
+    this.store.dispatch(loadPosts());
+  }
+
 }

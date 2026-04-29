@@ -1,0 +1,14 @@
+.component-b {
+      background-color: #f3e5f5;
+      border-left: 4px solid #7b1fa2;
+    }
+    .counter-display {
+      font-size: 3em;
+      font-weight: bold;
+      color: #7b1fa2;
+      text-align: center;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      margin: 15px 0;
+    }

@@ -1,0 +1,16 @@
+<p><h2>dynamic-forms works!</h2></p>
+<form [formGroup]="form">
+    <div *ngFor="let field of config">
+        <label>{{field.label}}</label>
+        <input [type]="field.type" [formControlName]="field.controlName"/>
+
+        <!-- Validation Ui -->
+         <div *ngIf="form.get(field.controlName)?.invalid && form.get(field.controlName)?.touched">
+            <span *ngIf="form.get(field.controlName)?.errors?.['required']">{{field.label}} is required</span>
+         </div>
+    </div>
+
+    <button type="button" (click)="submit()" [disabled]="form.invalid">submit</button>
+
+    <pre>{{form.value |json}}</pre>
+</form>

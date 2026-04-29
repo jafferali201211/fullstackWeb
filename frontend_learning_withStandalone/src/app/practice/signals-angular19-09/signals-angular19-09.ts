@@ -1,21 +1,27 @@
 import { Component, computed, effect, input ,signal} from '@angular/core';
+import { ComputedSignalComponent } from './computed-signal-component/computed-signal-component';
+import { ParentInputSignalComponent } from './parent-input-signal-component/parent-input-signal-component';
 
 @Component({
   selector: 'app-signals-angular19-09',
-  imports: [],
+  imports: [ComputedSignalComponent,ParentInputSignalComponent],
   templateUrl: './signals-angular19-09.html',
   styleUrl: './signals-angular19-09.css',
 })
 export class SignalsAngular1909 {
-  count = signal(0);
-  
-  doubleCount = computed(()=>this.count()*2);
 
+  count= signal(0);
+  // count= signal(0)
   constructor(){
-    this.count.set(5);
-    this.count.update((v)=>v+1)
+    
   }
-  inc(){
-    this.count.update((val)=>val+2)
+  increment(){
+   
+    this.count.update(c=>c++);
   }
+  decrement(){
+    this.count.update(c=>c--);
+  }
+
+  
 }

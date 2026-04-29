@@ -1,0 +1,10 @@
+<p>skill-form-array works!</p>
+<form [formGroup]="form">
+    <div formArrayName="skills">
+        <div *ngFor="let skill of skills.controls;let i=index">
+            <input [formControlName]="i">
+            <button (click)="removeSkill(i)">x</button>
+        </div>
+    </div>
+    <button (click)="addSkill()">Add1</button>
+</form>

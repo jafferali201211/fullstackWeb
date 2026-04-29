@@ -1,0 +1,17 @@
+<p>compoent-a works!</p>
+<div class="component-box component-a">
+      <h3>Component A - Counter Controller</h3>
+      <div class="button-group">
+        <button (click)="increment()" class="btn btn-primary">
+          Increment
+        </button>
+        <button (click)="decrement()" class="btn btn-secondary">
+          Decrement
+        </button>
+        <button (click)="reset()" class="btn btn-danger">
+          Reset
+        </button>
+      </div>
+      <p class="info">Current Count: <strong>{{ counterService.count }}</strong></p>
+      <p class="note">✔ This component controls the counter</p>
+    </div>

@@ -1,5 +1,9 @@
 <p>signals-angular19-09 works!</p>
 <!-- Zone mode signal  -->
- <p>{{count()}}</p>
- <button (click)="inc()">inc click</button>
- <p>{{doubleCount()}}</p>
+<p>Count : {{count()}}</p>
+
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement </button>
+
+<app-computed-signal-component></app-computed-signal-component>
+<app-parent-input-signal-component></app-parent-input-signal-component>

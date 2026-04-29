@@ -23,9 +23,17 @@ import { LayoutParent } from './practice/basics-01/layout-parent/layout-parent';
 import { PipeDemo } from './practice/pipe-demo/pipe-demo';
 import { InfiniteScroll } from './practice/infinite-scroll/infinite-scroll';
 import { PaginationDemo } from './practice/pagination-demo/pagination-demo';
+import { ServicesDi04 } from './practice/services-di-04/services-di-04';
+import { SkillFormArray } from './practice/forms-06/skill-form-array/skill-form-array';
+import { POCPractise } from './poc-practise/poc-practise';
+import { BehaviorsubjectSubjectDemo } from './practice/rxjs-07/behaviorsubject-subject-demo/behaviorsubject-subject-demo';
+import { ChangeDetectionParent } from './practice/change-detection-08/change-detection-parent/change-detection-parent';
+import { DynamicForms } from './practice/dynamic-forms/dynamic-forms';
+// import { DynamicReacticeForms } from './practice/dynamic-reactice-forms/dynamic-reactice-forms';
 @Component({
   selector: 'app-root',
-  imports: [PaginationDemo,InfiniteScroll,PipeDemo,Basics01, VirtualScrollRenderUserList,FormControlExample,JsonComp, RxjsForkjoinCombinelatestDemo, TableForm, SignalsAngular1909,EmployeeFormArray, RouterOutlet,InputChildDemo,Components02,CustomDirective,StructureDir,RegisterForms,ComponentA,ComponentB,SwitchmapSearch,ZoneMode],
+  // imports: [SkillFormArray,ServicesDi04,PaginationDemo,InfiniteScroll,PipeDemo,Basics01, VirtualScrollRenderUserList,FormControlExample,JsonComp, RxjsForkjoinCombinelatestDemo, TableForm, SignalsAngular1909,EmployeeFormArray, RouterOutlet,InputChildDemo,Components02,CustomDirective,StructureDir,RegisterForms,ComponentA,ComponentB,SwitchmapSearch,ZoneMode],
+  imports:[DynamicForms,ChangeDetectionParent,BehaviorsubjectSubjectDemo,SignalsAngular1909,POCPractise,ZoneMode,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

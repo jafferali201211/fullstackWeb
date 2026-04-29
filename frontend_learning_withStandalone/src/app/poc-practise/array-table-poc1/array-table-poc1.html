@@ -1,0 +1,42 @@
+<p>array-table-poc1 works!</p>
+
+<h2>Employee POC</h2>
+
+<!-- ✅ Input JSON -->
+<h3>Input JSON</h3>
+<pre>{{ employees | json }}</pre>
+
+<!-- ✅ Button -->
+<button (click)="createSeparateArrays()">
+  Create Separate Arrays
+</button>
+
+<hr />
+
+<!-- ✅ Output -->
+<div *ngIf="groupedEmployees">
+  <h3>Output JSON</h3>
+  <pre>{{ groupedEmployees | json }}</pre>
+  <!-- ✅ Tables per Department -->
+  <div *ngFor="let dept of departmentKeys">
+    <h3>{{ dept }} Department</h3>
+    
+    <table border="1" cellpadding="6"> 
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let emp of groupedEmployees[dept]">
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.salary }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+  </div>
+</div>

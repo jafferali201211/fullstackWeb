@@ -1,1 +1,11 @@
 <p>services-di-04 works!</p>
+
+<!-- @for(let post of posts$){
+    <p>{{post.id}}-{{post.title}}</p>
+} -->
+
+
+<h3>Component B</h3>
+    <div *ngFor="let post of posts$ | async">
+      {{ post.id }} - {{ post.title }}
+    </div>

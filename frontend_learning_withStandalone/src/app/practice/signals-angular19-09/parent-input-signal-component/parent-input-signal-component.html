@@ -1,0 +1,5 @@
+<p>parent-input-signal-component works!</p>
+
+<input (input)="parentMsg.set($any($event.target).value)" />
+
+<app-child-input-signal-component [message]="parentMsg()"></app-child-input-signal-component>
