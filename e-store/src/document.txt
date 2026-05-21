@@ -1,0 +1,5 @@
+npm install @fortawesome/angular-fontawesome --legacy-peer-deps
+npm install @fortawesome/free-solid-svg-icons --legacy-peer-deps
+
+import to fortawesome module
+ importProvidersFrom(FontAwesomeModule)

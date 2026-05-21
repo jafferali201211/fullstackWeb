@@ -34,7 +34,7 @@ export class DynamicForms implements OnInit{
     // ageControl?.updateValueAndValidity();
 
     const nameControl = this.form.get('name');
-    nameControl?.setValidators(noSpaceValidator);
+    nameControl?.setValidators([noSpaceValidator]);
     nameControl?.updateValueAndValidity();
     // Why updateValueAndValidity() is required?
     // Because Angular does not automatically re-run validation after validators change.

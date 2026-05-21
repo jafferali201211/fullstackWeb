@@ -8,6 +8,7 @@
          <div *ngIf="form.get(field.controlName)?.invalid && form.get(field.controlName)?.touched">
             <span *ngIf="form.get(field.controlName)?.errors?.['required']">{{field.label}} is required</span>
          </div>
+         <div *ngIf="field.controlName =='name' &&form.get(field.controlName)?.errors?.['noSpace'] && form.get(field.controlName)?.touched">no spaces allowed</div>
     </div>
 
     <button type="button" (click)="submit()" [disabled]="form.invalid">submit</button>

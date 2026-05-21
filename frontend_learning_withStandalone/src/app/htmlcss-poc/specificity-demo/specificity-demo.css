@@ -1,0 +1,18 @@
+p{
+    color:blue;  /* 1 */
+}
+.text{
+    color:green; /* 10 */
+}
+#mainText{
+    color:red;  /* 100 */
+}
+/* Output = red */
+/* reason  */
+/* 100> 10 = true  - it will return ture */
+/* 🧠 Thumb rule
+inline : 1000 // inline style="color:blue"
+ID : 100
+class: 10
+Tag: 1 
+*/

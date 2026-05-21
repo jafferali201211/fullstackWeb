@@ -29,11 +29,12 @@ import { POCPractise } from './poc-practise/poc-practise';
 import { BehaviorsubjectSubjectDemo } from './practice/rxjs-07/behaviorsubject-subject-demo/behaviorsubject-subject-demo';
 import { ChangeDetectionParent } from './practice/change-detection-08/change-detection-parent/change-detection-parent';
 import { DynamicForms } from './practice/dynamic-forms/dynamic-forms';
+import { HtmlcssPOC } from './htmlcss-poc/htmlcss-poc';
 // import { DynamicReacticeForms } from './practice/dynamic-reactice-forms/dynamic-reactice-forms';
 @Component({
   selector: 'app-root',
   // imports: [SkillFormArray,ServicesDi04,PaginationDemo,InfiniteScroll,PipeDemo,Basics01, VirtualScrollRenderUserList,FormControlExample,JsonComp, RxjsForkjoinCombinelatestDemo, TableForm, SignalsAngular1909,EmployeeFormArray, RouterOutlet,InputChildDemo,Components02,CustomDirective,StructureDir,RegisterForms,ComponentA,ComponentB,SwitchmapSearch,ZoneMode],
-  imports:[DynamicForms,ChangeDetectionParent,BehaviorsubjectSubjectDemo,SignalsAngular1909,POCPractise,ZoneMode,RouterOutlet],
+  imports:[HtmlcssPOC,DynamicForms,ChangeDetectionParent,BehaviorsubjectSubjectDemo,SignalsAngular1909,POCPractise,ZoneMode,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

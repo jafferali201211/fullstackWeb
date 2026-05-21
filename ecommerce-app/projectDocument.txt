@@ -1,0 +1,8 @@
+Libraries & tools
+used in this project
+Project development :angular 15
+database: mysql
+api : nodejs
+front-end library: Bootstrap 5.2.3
+    font awesome
+    rxjs 7.8

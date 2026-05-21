@@ -1,0 +1,6 @@
+<p>user-comp works!</p>
+<p>Id :  {{(user$|async)?.id}}</p>
+<p>Name : {{(user$|async)?.name}}</p>
+<p>Age: {{(user$|async)?.age}}</p>
+
+<button (click)="update()">update to name</button>

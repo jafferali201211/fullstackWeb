@@ -1,0 +1,13 @@
+/* ✅ Thumb rules:
+
+Padding = inside
+Margin = outside
+Width = content only (unless box-sizing) */
+.card{
+    padding: 16px;
+    margin:20px;
+    border:2px solid #ccc; 
+}
+
+
+

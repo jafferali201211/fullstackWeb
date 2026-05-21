@@ -1,0 +1,31 @@
+// @import  '../../../../../src/styles.scss';
+@use '../../../../../src/styles.scss' as styles;
+.side-navigation{
+    margin-top:1em;
+    padding:0.6em;
+    box-shadow: 1px 0px 14px 0px lightweight;
+    height:97%;
+    border-radius: 1em;
+}
+.section-title{
+    padding:1em;
+    h1{
+        text-align: center;;
+    }
+}
+.individual-category{
+    ul{
+        padding:0;
+    }
+    .sub-item{
+        text-align:center;
+        margin-bottom:0.6em;
+        list-style-type:none;
+         a {
+            text-decoration:none;
+            color:black;
+            @include styles.underline-transition(0.5)
+         }
+        }
+        
+}

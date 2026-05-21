@@ -9,6 +9,7 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideHttpClient } from '@angular/common/http';
 import { PostsEffects } from './posts/posts.effects';
 import { postsReducer } from './posts/posts.reducer';
+import { usersReducer } from './users/usersReducer.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,8 +18,8 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideZoneChangeDetection({ eventCoalescing: true }),
     
-    provideStore({posts: postsReducer}),
-    provideEffects([PostsEffects]),
+    provideStore({users:usersReducer}),
+    // provideEffects([PostsEffects]),
   
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
 ]
