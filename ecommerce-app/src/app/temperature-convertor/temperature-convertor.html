@@ -1,0 +1,16 @@
+<p>temperature-convertor works!</p>
+<form [formGroup]="temparatureForm">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="celsius">celsius</label>
+            <input type="number" id="celsius" formControlName="celsius" (change)="onCelsiusChange()">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="fahrenheit">fahrenheit</label>
+            <input type="number" id="fahrenheit" formControlName="fahrenheit" (change)="onFahrenheitChange()">
+        </div>
+    </div>
+</form>
+ 
