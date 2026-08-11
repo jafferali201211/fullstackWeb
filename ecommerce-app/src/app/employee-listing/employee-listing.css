@@ -1,0 +1,113 @@
+.employee-listing {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.employee-header {
+  margin-bottom: 1rem;
+}
+
+.employee-header h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  color: #1f2937;
+}
+
+.employee-header p {
+  margin: 0.5rem 0 0;
+  color: #4b5563;
+}
+
+.employee-form {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.employee-form label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.employee-form input {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button,
+.edit-button,
+.delete-button {
+  border: none;
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary-button {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.employee-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.employee-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+}
+
+.employee-name {
+  font-weight: 700;
+  color: #111827;
+}
+
+.employee-meta {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.employee-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-button {
+  background: #fbbf24;
+  color: #111827;
+}
+
+.delete-button {
+  background: #ef4444;
+  color: white;
+}

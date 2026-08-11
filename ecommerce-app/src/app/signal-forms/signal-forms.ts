@@ -9,7 +9,11 @@ import {form,required,email,FormField} from '@angular/forms/signals'
   styleUrl: './signal-forms.css',
 })
 export class SignalForms {
+  count = signal(0);
+  count1 = signal<object>({});
+ count2 =signal<any[]>([]);
 
+ 
   loginModal = signal({
     email:'',
     password:''
@@ -21,6 +25,7 @@ export class SignalForms {
   });
   ngOnInit(){
     console.log('test',this.loginForm);
+    this.count.set(10);
   }
   submit(){
     // if (this.loginForm().invalid()) {
@@ -30,4 +35,5 @@ export class SignalForms {
       console.log('invalid form',this.loginForm().errors());
   }
   }
+
 }

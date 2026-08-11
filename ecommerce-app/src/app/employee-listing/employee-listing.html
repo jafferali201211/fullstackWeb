@@ -1,0 +1,45 @@
+<section class="employee-listing">
+  <div class="employee-header">
+    <h2>Employee CRUD</h2>
+    <p>Use the form to add, edit, or remove employees.</p>
+  </div>
+
+  <form [formGroup]="employeeForm" (ngSubmit)="addOrUpdateEmployee()" class="employee-form">
+    <label>
+      Name
+      <input formControlName="name" placeholder="Enter name" />
+    </label>
+
+    <label>
+      Position
+      <input formControlName="position" placeholder="Enter position" />
+    </label>
+
+    <label>
+      Department
+      <input formControlName="department" placeholder="Enter department" />
+    </label>
+
+    <div class="form-actions">
+      <button type="submit" class="primary-button">
+        {{ selectedEmployee() ? 'Update' : 'Add' }} Employee
+      </button>
+      <button type="button" class="secondary-button" (click)="resetForm()" *ngIf="selectedEmployee()">
+        Cancel
+      </button>
+    </div>
+  </form>
+
+  <div class="employee-list">
+    <div class="employee-card" *ngFor="let employee of employees(); trackBy: trackByEmployee">
+      <div>
+        <div class="employee-name">{{ employee.name }}</div>
+        <div class="employee-meta">{{ employee.position }} · {{ employee.department }}</div>
+      </div>
+      <div class="employee-actions">
+        <button type="button" class="edit-button" (click)="editEmployee(employee)">Edit</button>
+        <button type="button" class="delete-button" (click)="deleteEmployee(employee)">Delete</button>
+      </div>
+    </div>
+  </div>
+</section>
